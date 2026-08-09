@@ -7,9 +7,15 @@ on:
 jobs:
   deploy:
     runs-on: self-hosted
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Configure production environment
+        run: |
+          cp ~/production-env/chatify/backend.env backend/.env
+          chmod 600 backend/.env
 
       - name: Build and restart containers
         run: docker compose up -d --build
