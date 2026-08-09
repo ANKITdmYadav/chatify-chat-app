@@ -61,7 +61,7 @@ function ProfileHeader() {
               {authUser.fullName}
             </h3>
 
-            <p className="text-slate-400 text-xs">Online</p>
+            <p className="text-slate-400 text-xs">Active</p>
           </div>
         </div>
 
